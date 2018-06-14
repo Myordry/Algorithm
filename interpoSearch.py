@@ -4,7 +4,8 @@ def binarySearch(myList,key):
     time = 0
     while low < high:
         time += 1
-        mid = (low+high)//2
+        # 计算mid值是插值算法的核心代码
+        mid = low + (high-low)*(key - myList[low])//(myList[high]-myList[low])
         if key<myList[mid]:
             high = mid - 1
         elif key>myList[mid]:

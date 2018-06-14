@@ -1,7 +1,7 @@
 def selectSort(myList):
     for i in range(0,len(myList)-1):  #注意i,j下标的范围
         index = i
-        for j in range(i+1,len(myList)):
+        for j in range(i+1,len(myList)):  ##完成对后面所有数的循环，找到最小的那个值，赋给index
             if myList[index] > myList[j]:
                 index = j
         myList[i],myList[index] = myList[index],myList[i]
